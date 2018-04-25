@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "apps/monolith"
+		}
+	],
+	"settings": {
+    "editor.formatOnSave": true,
+    "prettier.eslintIntegration": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    }
+  }
+}
