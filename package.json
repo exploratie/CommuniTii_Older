@@ -17,6 +17,6 @@
     "prettier": "^1.12.1"
   },
   "scripts": {
-    "i": "npm i && lerna bootstrap"
+    "i": "yarn && lerna bootstrap"
   }
 }
