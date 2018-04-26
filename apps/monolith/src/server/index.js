@@ -1,8 +1,10 @@
 import React from "react"
 import express from "express"
 import { renderToString } from "react-dom/server"
+import { ServerStyleSheet } from "styled-components"
 
-import App from "../common/App"
+import App from "common/App"
+import renderHtml from "./lib/renderHtml"
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
 
@@ -12,28 +14,16 @@ server
   .disable("x-powered-by")
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get("/*", (req, res) => {
-    const markup = renderToString(<App />)
-    res.send(
-      // prettier-ignore
-      `<!doctype html>
-    <html lang="">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta charSet='utf-8' />
-        <title>Welcome to Razzle</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        ${
-          assets.client.css
-            ? `<link rel="stylesheet" href="${assets.client.css}">`
-            : ''
-        }
-    </head>
-    <body>
-        <div id="root">${markup}</div>
-        <script src="${assets.client.js}" defer crossorigin></script>
-    </body>
-</html>`
-    )
+    // USE Pipe operators once there's better support from eslint
+    // <App />
+    //  |> renderToString
+    //  |> (markup => renderHtml({markup, assets }))
+    //  |> res.send
+    const sheet = new ServerStyleSheet()
+    const markup = renderToString(sheet.collectStyles(<App />))
+    const styles = sheet.getStyleTags()
+    const html = renderHtml({ markup, styles, assets })
+    res.send(html)
   })
 
 export default server
