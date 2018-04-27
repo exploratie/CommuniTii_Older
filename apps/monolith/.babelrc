@@ -1,6 +1,7 @@
 {
   "presets": ["razzle/babel", "es2017", "stage-0"],
   "plugins": [
+    "inline-import-graphql-ast",
     "transform-decorators-legacy",
     [
       "babel-plugin-styled-components",

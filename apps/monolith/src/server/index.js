@@ -3,25 +3,24 @@ import { GraphQLServer } from "graphql-yoga"
 import { renderToString } from "react-dom/server"
 import { ServerStyleSheet } from "styled-components"
 import express from "express"
+import { makeExecutableSchema, mergeSchemas } from "graphql-tools"
 
 import App from "common/App"
 import renderHtml from "./lib/renderHtml"
 
+import schemas from "./typeDefs"
+import resolvers from "./resolvers"
+
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
 
-const typeDefs = `
-  type Query {
-    hello(name: String): String!
-  }
-`
+const schema = mergeSchemas({
+  schemas,
+  resolvers
+})
 
-const resolvers = {
-  Query: {
-    hello: (_, { name }) => `Hello ${name || "World"}`
-  }
-}
-
-const server = new GraphQLServer({ typeDefs, resolvers })
+const server = new GraphQLServer({
+  schema
+})
 
 server.express
   .disable("x-powered-by")
