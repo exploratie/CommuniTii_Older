@@ -1,17 +1,10 @@
-import React from "react"
-import { GraphQLServer } from "graphql-yoga"
-import { renderToString } from "react-dom/server"
-import { ServerStyleSheet } from "styled-components"
 import express from "express"
-import { makeExecutableSchema, mergeSchemas } from "graphql-tools"
-
-import App from "common/App"
-import renderHtml from "./lib/renderHtml"
+import { GraphQLServer } from "graphql-yoga"
+import { mergeSchemas } from "graphql-tools"
 
 import schemas from "./typeDefs"
 import resolvers from "./resolvers"
-
-const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
+import ssrRenderer from "./lib/ssrRenderer"
 
 const schema = mergeSchemas({
   schemas,
@@ -26,11 +19,21 @@ server.express
   .disable("x-powered-by")
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get(/[^graphql]$/, (req, res) => {
-    const sheet = new ServerStyleSheet()
-    const markup = renderToString(sheet.collectStyles(<App />))
-    const styles = sheet.getStyleTags()
-    const html = renderHtml({ markup, styles, assets })
-    res.send(html)
+    ssrRenderer(schema)
+      .then(content => {
+        res.status(200)
+        res.send(content)
+        res.end()
+      })
+      .catch(e => {
+        console.error("RENDERING ERROR:", e) // eslint-disable-line no-console
+        res.status(500)
+        res.end(
+          `An error occurred while server rendering with the following stack trace:\n\n${
+            e.stack
+          }`
+        )
+      })
   })
 
 export default server

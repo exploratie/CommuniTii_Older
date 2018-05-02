@@ -1,5 +1,13 @@
 import React from "react"
+import { hot } from "react-hot-loader"
 
-const App = () => <h1>Hello</h1>
+import TestContainer from "./containers/TestContainer"
 
-export default App
+const App = () => (
+  <div>
+    <h1>Hi</h1>
+    <TestContainer />
+  </div>
+)
+
+export default hot(module)(App)

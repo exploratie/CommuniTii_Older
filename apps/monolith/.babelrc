@@ -3,6 +3,7 @@
   "plugins": [
     "inline-import-graphql-ast",
     "transform-decorators-legacy",
+    "react-hot-loader/babel",
     [
       "babel-plugin-styled-components",
       {
