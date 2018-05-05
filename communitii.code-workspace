@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "apps/monolith"
+		},
+		{
+			"path": "apps/mobile"
 		}
 	],
 	"settings": {

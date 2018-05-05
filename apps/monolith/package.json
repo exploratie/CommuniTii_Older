@@ -2,6 +2,7 @@
   "name": "@communitii/monolith",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "add:l": "lerna add --scope=@communitii/monolith",
     "start": "razzle start",
