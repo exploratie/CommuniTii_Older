@@ -1,6 +1,5 @@
 import React from "react"
 import { renderToStaticMarkup, renderToString } from "react-dom/server"
-import { ServerStyleSheet } from "styled-components"
 import { ApolloProvider, renderToStringWithData } from "react-apollo"
 import { ApolloClient } from "apollo-client"
 import { SchemaLink } from "apollo-link-schema"
