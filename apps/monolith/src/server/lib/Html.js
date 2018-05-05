@@ -12,6 +12,10 @@ const Html = ({ markup, styles, assets, client: { cache } }) => (
         rel="stylesheet"
         href={assets.client.css ? assets.client.css : ""}
       />
+      <style
+        id="jss-server-side"
+        dangerouslySetInnerHTML={{ __html: styles }}
+      />
     </head>
     <body>
       <div id="root" dangerouslySetInnerHTML={{ __html: markup }} />
