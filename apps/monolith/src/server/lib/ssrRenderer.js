@@ -6,6 +6,7 @@ import { SchemaLink } from "apollo-link-schema"
 import { InMemoryCache } from "apollo-cache-inmemory"
 import JssProvider from "react-jss/lib/JssProvider"
 import { SheetsRegistry } from "react-jss/lib/jss"
+import { StaticRouter } from "react-router"
 import {
   MuiThemeProvider,
   createMuiTheme,
@@ -16,7 +17,7 @@ import Html from "./Html"
 import App from "common/App"
 import theme from "common/lib/theme"
 
-export default async schema => {
+export default async ({ schema, req, res }) => {
   const client = new ApolloClient({
     ssr: true,
     cache: new InMemoryCache(),
@@ -27,16 +28,18 @@ export default async schema => {
   const sheetsRegistry = new SheetsRegistry()
 
   const markup = await renderToStringWithData(
-    <ApolloProvider client={client}>
-      <JssProvider
-        registry={sheetsRegistry}
-        generateClassName={generateClassName}
-      >
-        <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
-          <App />
-        </MuiThemeProvider>
-      </JssProvider>
-    </ApolloProvider>
+    <StaticRouter location={req.url} context={{}}>
+      <ApolloProvider client={client}>
+        <JssProvider
+          registry={sheetsRegistry}
+          generateClassName={generateClassName}
+        >
+          <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
+            <App />
+          </MuiThemeProvider>
+        </JssProvider>
+      </ApolloProvider>
+    </StaticRouter>
   )
 
   const html = (

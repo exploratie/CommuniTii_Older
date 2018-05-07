@@ -19,7 +19,7 @@ server.express
   .disable("x-powered-by")
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get(/[^graphql]$/, (req, res) => {
-    ssrRenderer(schema)
+    ssrRenderer({ schema, req, res })
       .then(content => {
         res.status(200)
         res.send(content)

@@ -1,20 +1,27 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { hot } from "react-hot-loader"
+import CssBaseline from "material-ui/CssBaseline"
+import { Route, Switch } from "react-router-dom"
+
 import "typeface-roboto/index.css"
 import "material-design-icons/iconfont/material-icons.css"
-import CssBaseline from "material-ui/CssBaseline"
-import Typography from "material-ui/Typography"
 
-import TestContainer from "./containers/TestContainer"
+import Pages from "./pages"
 
 const App = () => (
-  <div>
+  <Fragment>
     <CssBaseline />
-    <Typography variant="display1" gutterBottom>
-      Hi
-    </Typography>
-    <TestContainer />
-  </div>
+    <Switch>
+      {Pages.map(({ path, exact, component: Component, ...rest }) => (
+        <Route
+          key={path}
+          path={path}
+          exact={exact}
+          render={props => <Component {...props} {...rest} />}
+        />
+      ))}
+    </Switch>
+  </Fragment>
 )
 
 export default hot(module)(App)

@@ -3,6 +3,7 @@ import { hydrate } from "react-dom"
 import App from "common/App"
 import { ApolloProvider } from "react-apollo"
 import { MuiThemeProvider } from "material-ui/styles"
+import { BrowserRouter } from "react-router-dom"
 
 import createClient from "./lib/initApollo"
 import theme from "common/lib/theme"
@@ -19,18 +20,22 @@ class AppContainer extends React.Component {
 
   render() {
     return (
-      <ApolloProvider client={client}>
-        <App {...this.props} />
-      </ApolloProvider>
+      <BrowserRouter>
+        <ApolloProvider client={client}>
+          <App {...this.props} />
+        </ApolloProvider>
+      </BrowserRouter>
     )
   }
 }
 
-hydrate(
-  <MuiThemeProvider theme={theme}>
-    <AppContainer />
-  </MuiThemeProvider>,
-  document.getElementById("root")
-)
+window.addEventListener("DOMContentLoaded", () => {
+  hydrate(
+    <MuiThemeProvider theme={theme}>
+      <AppContainer />
+    </MuiThemeProvider>,
+    document.getElementById("root")
+  )
+})
 
 if (module.hot) module.hot.accept()
