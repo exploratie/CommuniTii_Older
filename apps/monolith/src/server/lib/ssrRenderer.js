@@ -42,7 +42,7 @@ export default async ({ schema, req, res }) => {
     </StaticRouter>
   )
 
-  const html = (
+  const html = renderToStaticMarkup(
     <Html
       markup={markup}
       styles={sheetsRegistry.toString()}
@@ -51,5 +51,5 @@ export default async ({ schema, req, res }) => {
     />
   )
 
-  return `<!doctype html>\n${renderToStaticMarkup(html)}`
+  return `<!doctype html>\n${html}`
 }

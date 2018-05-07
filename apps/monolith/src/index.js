@@ -1,4 +1,4 @@
-import app from "./server"
+import initServer from "./server"
 
 if (module.hot) {
   module.hot.accept("./server", function() {
@@ -9,11 +9,16 @@ if (module.hot) {
 
 const port = process.env.PORT || 3000
 
-export default app.start(
-  {
-    port,
-    endpoint: "/graphql",
-    playground: "/graphql"
-  },
-  ({ port }) => console.log(`> Started on port ${port}`)
-)
+const start = async () => {
+  const app = await initServer()
+  app.start(
+    {
+      port,
+      endpoint: "/graphql",
+      playground: "/graphql"
+    },
+    ({ port }) => console.log(`> Started on port ${port}`)
+  )
+}
+
+export default start()
