@@ -14,12 +14,11 @@ export default async () => {
 
   try {
     if (isDev) {
-      const { MongodHelper } = require("mongodb-prebuilt")
+      const { MongodHelper } = await import("mongodb-prebuilt")
       const mongodHelper = new MongodHelper(["--port", "4000"])
 
-      console.log("about to start mongo")
       await mongodHelper.run()
-      console.log(`Started MongoDB for Development at ${mongoURL}`)
+      console.log(`➡️  Started MongoDB for Development at ${mongoURL}`)
     }
 
     const conn = new MongoConnector(mongoURL)

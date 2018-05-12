@@ -17,7 +17,7 @@ const start = async () => {
       endpoint: "/graphql",
       playground: "/graphql"
     },
-    ({ port }) => console.log(`> Started on port ${port}`)
+    ({ port }) => console.log(`🌐  Started on port ${port}`)
   )
 }
 
