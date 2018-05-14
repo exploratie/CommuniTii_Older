@@ -1,7 +1,6 @@
 import { createStackNavigator } from "react-navigation"
-
-import QuestSearchScreen from "./QuestSearch"
+import MessageListScreen from "./MessageList"
 
 export default createStackNavigator({
-  QuestSearch: { screen: QuestSearchScreen }
+  MessageList: { screen: MessageListScreen }
 })

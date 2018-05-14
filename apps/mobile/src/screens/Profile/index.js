@@ -1,6 +1,6 @@
-import React from "react"
-import { Title } from "react-native-paper"
+import { createStackNavigator } from "react-navigation"
+import UserProfileScreen from "./UserProfile"
 
-const ProfileScreen = () => <Title>Profile Screen</Title>
-
-export default ProfileScreen
+export default createStackNavigator({
+  UserProfile: { screen: UserProfileScreen }
+})
