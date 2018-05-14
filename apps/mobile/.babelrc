@@ -1,8 +1,21 @@
 {
-  "presets": ["babel-preset-expo"],
+  "presets": ["babel-preset-expo", "es2017", "stage-0"],
+  "plugins": [
+    "inline-import-graphql-ast",
+    "transform-decorators-legacy",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"]
+      }
+    ]
+  ],
   "env": {
     "development": {
       "plugins": ["transform-react-jsx-source"]
+    },
+    "production": {
+      "plugins": ["react-native-paper/babel"]
     }
   }
 }
