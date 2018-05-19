@@ -12,7 +12,10 @@ export default async () => {
   try {
     if (isDev) {
       const { MongodHelper } = await import("mongodb-prebuilt")
-      const mongodHelper = new MongodHelper(["--port", "4000"])
+      const mongodHelper = new MongodHelper([
+        "--port",
+        process.env.RAZZLE_MONGO_DEV_PORT
+      ])
       await mongodHelper.run()
       console.log(`🗄  Started MongoDB for development at ${mongoURL}`)
     }

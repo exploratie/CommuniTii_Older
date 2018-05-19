@@ -1,5 +1,7 @@
 import React from "react"
 import { Title } from "react-native-paper"
+import { View } from "react-native"
+import TestContainer from "containers/TestContainer"
 
 class UserProfileScreen extends React.PureComponent {
   static navigationOptions = {
@@ -7,7 +9,12 @@ class UserProfileScreen extends React.PureComponent {
   }
 
   render() {
-    return <Title>Profile Screen</Title>
+    return (
+      <View>
+        <Title>Profile Screen</Title>
+        <TestContainer />
+      </View>
+    )
   }
 }
 
