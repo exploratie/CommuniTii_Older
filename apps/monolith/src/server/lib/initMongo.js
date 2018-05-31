@@ -1,5 +1,6 @@
 import { MongoConnector, MongoEntity } from "apollo-connector-mongodb"
 import lruCache from "lru-cache"
+import signale from "signale"
 
 export default async () => {
   const isDev = process.env.NODE_ENV === "development"
@@ -17,16 +18,18 @@ export default async () => {
         process.env.RAZZLE_MONGO_DEV_PORT
       ])
       await mongodHelper.run()
-      console.log(`🗄  Started MongoDB for development at ${mongoURL}`)
+      signale.success(`🗄  Started MongoDB for development at ${mongoURL}`)
     }
 
     const conn = new MongoConnector(mongoURL)
     await conn.connect()
 
-    const test = new MongoEntity(conn, "test", { cacheMap: lruCache })
+    const Test = new MongoEntity(conn, "test", { cacheMap: lruCache })
+    const Users = new MongoEntity(conn, "users", { cacheMap: lruCache })
 
     return {
-      test
+      Test,
+      Users
     }
   } catch (e) {
     throw new Error(e)

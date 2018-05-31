@@ -1,10 +1,12 @@
+import signale from "signale"
+
 import initServer from "./server"
 
 if (module.hot) {
   module.hot.accept("./server", function() {
-    console.log("🔁  HMR Reloading `./server`...")
+    signale.watch("🔁  HMR Reloading `./server`...")
   })
-  console.info("✅  Server-side HMR Enabled!")
+  signale.success("✅  Server-side HMR Enabled!")
 }
 
 const port = process.env.PORT || 3000
@@ -17,7 +19,7 @@ const start = async () => {
       endpoint: "/graphql",
       playground: "/graphql"
     },
-    ({ port }) => console.log(`🌐  Started on port ${port}`)
+    ({ port }) => signale.success(`🌐  Started on port ${port}`)
   )
 }
 
