@@ -15,9 +15,9 @@ sudo chown -R $USER /data/db
 * Run `yarn i` in the project root
 * Paitently wait as all the dependencies are installed
 * Create `.env` and `.env.development` files in the project root and setup the appropriate environmental variables
-  > For Monolith
 
 ```
+# @communitii/monolith
 # .env file
 RAZZLE_MONGO_DEV_PORT=4000
 ```
