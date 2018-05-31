@@ -8,12 +8,6 @@
 		},
 		{
 			"path": "apps/mobile"
-		},
-		{
-			"path": "apps/api"
-		},
-		{
-			"path": "apps/web"
 		}
 	],
 	"settings": {
