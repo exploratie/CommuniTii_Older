@@ -14,7 +14,7 @@ sudo chown -R $USER /data/db
 
 * Run `yarn i` in the project root
 * Paitently wait as all the dependencies are installed
-* Create `.env` and `.env.development` files in the project root and setup the appropriate environmental variables
+* Create `.env` and `.env.development` files in the app root directories and setup the appropriate environmental variables
 
 ```
 # @communitii/monolith
