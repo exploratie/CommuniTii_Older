@@ -5,10 +5,14 @@
   "license": "MIT",
   "scripts": {
     "add:l": "lerna add --scope=@communitii/web",
-    "dev": "poi"
+    "dev": "poi",
+    "build": "poi build",
+    "predeploy": "yarn build",
+    "deploy": "surge dist/"
   },
   "devDependencies": {
-    "poi": "^10.2.9"
+    "poi": "^10.2.9",
+    "surge": "^0.20.1"
   },
   "dependencies": {
     "connected-react-router": "^4.3.0",
