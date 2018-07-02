@@ -431,5 +431,7 @@ $RECYCLE.BIN/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
+### Visual Studio Live Share Folder ###
+.vs
 
 # End of https://www.gitignore.io/api/node,xcode,macos,linux,android,windows,reactnative,androidstudio
