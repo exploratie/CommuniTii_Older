@@ -4,13 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "add:l": "lerna add --scope=@communitii/web"
+    "add:l": "lerna add --scope=@communitii/web",
+    "dev": "poi"
   },
   "devDependencies": {
     "poi": "^10.2.9"
   },
   "dependencies": {
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3"
   }
 }
