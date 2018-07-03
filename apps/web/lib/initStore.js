@@ -4,10 +4,11 @@ import thunkMiddleware from "redux-thunk"
 import loggerMiddleware from "redux-logger"
 import { getFirebase, reactReduxFirebase } from "react-redux-firebase"
 import { reduxFirestore } from "redux-firestore"
+import { connectRouter, routerMiddleware } from "connected-react-router"
 
 export default (
   allReducers,
-  firebase,
+  { firebase, history },
   preloadedState = {},
   isDev = process.env.NODE_ENV !== "production"
 ) => {
@@ -23,7 +24,10 @@ export default (
     setProfilePopulateResults: true
   }
 
-  const prodMiddlewares = [thunkMiddleware.withExtraArgument(getFirebase)]
+  const prodMiddlewares = [
+    routerMiddleware(history),
+    thunkMiddleware.withExtraArgument(getFirebase)
+  ]
   const devMiddlewares = [loggerMiddleware]
   const middlewares = [...prodMiddlewares, ...(isDev ? devMiddlewares : [])]
 
@@ -34,7 +38,7 @@ export default (
   ]
 
   return createStore(
-    reducers,
+    connectRouter(history)(reducers),
     preloadedState,
     composeWithDevTools(...composedArgs)
   )

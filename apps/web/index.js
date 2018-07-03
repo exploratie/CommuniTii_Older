@@ -1,11 +1,13 @@
 import React from "react"
 import { render } from "react-dom"
-import App from "./containers/App"
 import { Provider as ReduxProvider } from "react-redux"
+import { createBrowserHistory } from "history"
+import { ConnectedRouter as Router } from "connected-react-router"
 
 import allReducers from "./reducers"
 import createStore from "./lib/initStore"
 import getFirebase from "./lib/initFirebase"
+import App from "./containers/App"
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -17,13 +19,16 @@ const firebaseConfig = {
 }
 const firebase = getFirebase(firebaseConfig)
 firebase.firestore()
+const history = createBrowserHistory()
 
-const store = createStore(allReducers, firebase)
+const store = createStore(allReducers, { firebase, history })
 
 const renderApp = App =>
   render(
     <ReduxProvider store={store}>
-      <App />
+      <Router history={history}>
+        <App />
+      </Router>
     </ReduxProvider>,
     document.getElementById("app")
   )
