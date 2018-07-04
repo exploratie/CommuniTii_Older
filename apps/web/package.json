@@ -1,29 +1,34 @@
 {
   "name": "@communitii/web",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "scripts": {
     "add:l": "lerna add --scope=@communitii/web",
     "dev": "poi",
     "build": "poi build",
     "predeploy": "yarn build",
-    "deploy": "surge dist/"
+    "deploy": "firebase deploy"
   },
   "devDependencies": {
-    "poi": "^10.2.9",
-    "surge": "^0.20.1"
+    "@poi/plugin-sw-precache": "^10.0.1",
+    "firebase-tools": "^3.19.3",
+    "poi": "^10.2.9"
   },
   "dependencies": {
+    "@material-ui/core": "^1.3.1",
+    "@material-ui/icons": "^1.1.0",
     "connected-react-router": "^4.3.0",
     "firebase": "^5.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.3.3",
     "react-redux": "^5.0.7",
     "react-redux-firebase": "^2.1.6",
     "react-router-dom": "^4.3.1",
+    "recompose": "^0.27.1",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-firestore": "^0.5.7",
