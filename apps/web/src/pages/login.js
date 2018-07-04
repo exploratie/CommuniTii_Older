@@ -1,5 +1,8 @@
 import React from "react"
+import Typography from "@material-ui/core/Typography"
 
-const LoginPage = () => <h1>This is the login Page</h1>
+const LoginPage = () => (
+  <Typography variant="title">This is the login Page</Typography>
+)
 
 export default LoginPage

@@ -1,10 +1,11 @@
 import React from "react"
+import Typography from "@material-ui/core/Typography"
 
 import Test from "../containers/LocalTest"
 
 const LoginPage = () => (
   <div>
-    <h1>This is the login Page</h1>
+    <Typography variant="title">This is the Test Page</Typography>
     <Test />
   </div>
 )

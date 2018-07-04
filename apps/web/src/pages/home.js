@@ -1,5 +1,8 @@
 import React from "react"
+import Typography from "@material-ui/core/Typography"
 
-const HomePage = () => <h1>This is the home Page</h1>
+const HomePage = () => (
+  <Typography variant="title">This is the home Page</Typography>
+)
 
 export default HomePage
