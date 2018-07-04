@@ -9,10 +9,13 @@
     ],
     "settings": {
     "editor.formatOnSave": true,
+    "eslint.packageManager": "yarn",
     "prettier.eslintIntegration": true,
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
       "javascript": "javascriptreact"
-    }
-  }
+    },
+    "todo-tree.flat": false,
+    "todo-tree.grouped": true
+}
 }
