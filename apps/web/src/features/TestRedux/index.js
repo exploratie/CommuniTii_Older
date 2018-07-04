@@ -2,8 +2,8 @@ import React from "react"
 import { connect } from "react-redux"
 import { func, number } from "prop-types"
 
-import Test from "../components/Test"
-import { localAdd, localSubstract } from "../actions/test"
+import Test from "../../components/Test"
+import { localAdd, localSubstract } from "./actions"
 
 const mapStateToProps = ({ test }) => ({
   score: test.score

@@ -1,4 +1,4 @@
-import { localAdd, localSubstract } from "../types/test"
+import { localAdd, localSubstract } from "./types"
 
 const initialState = {
   score: 0

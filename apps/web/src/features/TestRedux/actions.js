@@ -1,7 +1,7 @@
 import {
   localAdd as localAddType,
   localSubstract as localSubstractType
-} from "../types/test"
+} from "./types"
 
 export const localAdd = i => ({
   type: localAddType,
