@@ -5,9 +5,10 @@ import loggerMiddleware from "redux-logger"
 import { getFirebase, reactReduxFirebase } from "react-redux-firebase"
 import { reduxFirestore } from "redux-firestore"
 import { connectRouter, routerMiddleware } from "connected-react-router"
+import { createEpicMiddleware } from "redux-observable"
 
 export default (
-  allReducers,
+  { allReducers, allEpics },
   { firebase, history },
   preloadedState = {},
   isDev = process.env.NODE_ENV !== "production"
@@ -24,8 +25,13 @@ export default (
     setProfilePopulateResults: true
   }
 
+  const epicMiddleware = createEpicMiddleware({
+    dependencies: { getFirebase }
+  })
+
   const prodMiddlewares = [
     routerMiddleware(history),
+    epicMiddleware,
     thunkMiddleware.withExtraArgument(getFirebase)
   ]
   const devMiddlewares = [loggerMiddleware]
@@ -37,9 +43,15 @@ export default (
     applyMiddleware(...middlewares)
   ]
 
-  return createStore(
+  const store = createStore(
     connectRouter(history)(reducers),
     preloadedState,
     composeWithDevTools(...composedArgs)
   )
+
+  epicMiddleware.run(allEpics)
+
+  return store
 }
+
+// TODO: add hot reloding to redux reducers and redux-observable epics

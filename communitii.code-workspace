@@ -16,6 +16,7 @@
       "javascript": "javascriptreact"
     },
     "todo-tree.flat": false,
-    "todo-tree.grouped": true
+    "todo-tree.grouped": false,
+    "todo-tree.expanded": true
 }
 }

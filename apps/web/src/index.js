@@ -5,8 +5,9 @@ import { createBrowserHistory } from "history"
 import { ConnectedRouter as Router } from "connected-react-router"
 
 import allReducers from "./reducers"
+import allEpics from "./epics"
 import createStore from "./lib/initStore"
-import getFirebase from "./lib/initFirebase"
+import initFirebase from "./lib/initFirebase"
 import App from "./containers/App"
 
 const firebaseConfig = {
@@ -17,11 +18,11 @@ const firebaseConfig = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 }
-const firebase = getFirebase(firebaseConfig)
+const firebase = initFirebase(firebaseConfig)
 firebase.firestore()
 const history = createBrowserHistory()
 
-const store = createStore(allReducers, { firebase, history })
+const store = createStore({ allReducers, allEpics }, { firebase, history })
 
 const renderApp = App =>
   render(
