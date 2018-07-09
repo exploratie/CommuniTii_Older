@@ -8,18 +8,34 @@
     "dev": "poi",
     "build": "poi build",
     "predeploy": "yarn build",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "storybook": "start-storybook -p 6006",
+    "build:storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/preset-es2017": "^7.0.0-beta.52",
+    "@babel/preset-react": "^7.0.0-beta.52",
+    "@babel/preset-stage-0": "^7.0.0-beta.52",
     "@poi/plugin-sw-precache": "^10.0.1",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-backgrounds": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addon-viewport": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^7.0.0-0",
+    "babel-runtime": "^6.26.0",
     "firebase-tools": "^3.19.3",
-    "poi": "^10.2.9"
+    "poi": "^10.2.9",
+    "storybook-addon-material-ui": "^0.9.0-alpha.8"
   },
   "dependencies": {
     "@material-ui/core": "^1.3.1",
     "@material-ui/icons": "^1.1.0",
     "connected-react-router": "^4.3.0",
     "firebase": "^5.2.0",
+    "formik": "^0.11.11",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
