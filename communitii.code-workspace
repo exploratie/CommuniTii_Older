@@ -8,9 +8,13 @@
         }
     ],
     "settings": {
-    "editor.formatOnSave": true,
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
     "eslint.packageManager": "yarn",
+    "eslint.executeAutofix": true,
     "prettier.eslintIntegration": true,
+    "prettier.parser": "flow",
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
       "javascript": "javascriptreact"

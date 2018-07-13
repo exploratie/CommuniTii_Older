@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "experimentalDecorators": true,
+    "checkJs": false,
+    "jsx": "react",
+    "module": "commonjs"
+  },
+  "include": ["src/**/*"]
+}

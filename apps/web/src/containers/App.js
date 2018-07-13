@@ -29,4 +29,7 @@ const App = () => (
   </Fragment>
 )
 
-export default compose(hot(module), withMaterialRoot)(App)
+export default compose(
+  hot(module),
+  withMaterialRoot
+)(App)

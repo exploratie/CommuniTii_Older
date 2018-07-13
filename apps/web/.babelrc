@@ -1,4 +1,13 @@
 {
-  presets: ["poi"],
+  presets: [
+    [
+      "@babel/stage-0",
+      {
+        decoratorsLegacy: true,
+        pipelineProposal: "minimal"
+      }
+    ],
+    "poi"
+  ],
   plugins: ["react-hot-loader/babel"]
 }

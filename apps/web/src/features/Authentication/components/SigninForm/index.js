@@ -16,9 +16,9 @@ const styles = theme => ({
   }
 })
 
-const renderTextField = ({ input, ...restProps }) => (
-  <TextField {...input} {...restProps} />
-)
+const renderTextField = (
+    {input, ...restProps}  // eslint-disable-line
+) => <TextField {...input} {...restProps} />
 
 const SigninForm = ({ classes, handleSubmit }) => (
   <Paper onSubmit={handleSubmit} component="form" className={classes.container}>
@@ -52,8 +52,10 @@ SigninForm.propTypes = {
   handleSubmit: func
 }
 
-export default compose(reduxForm({ form: "signin" }), withStyles(styles))(
-  SigninForm
-)
+export default compose(
+  reduxForm({ form: "signin" }),
+  withStyles(styles)
+)(SigninForm)
 
-// TODO: Add cleaner styling
+// TODO: Add styling
+// TODO: Add proper error handling login form
