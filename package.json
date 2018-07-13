@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "devDependencies": {
-    "@playlyfe/gql": "^2.6.0",
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",

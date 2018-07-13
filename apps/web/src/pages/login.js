@@ -1,8 +1,8 @@
+// import Typography from "@material-ui/core/Typography"
 import React from "react"
-import Typography from "@material-ui/core/Typography"
 
-const LoginPage = () => (
-  <Typography variant="title">This is the login Page</Typography>
-)
+import SigninForm from "../features/Authentication/containers/SigninForm"
+
+const LoginPage = () => <SigninForm />
 
 export default LoginPage

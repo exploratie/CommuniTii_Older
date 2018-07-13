@@ -18,7 +18,8 @@ export default (
   // react-redux-firebase config
   const reduxFirebaseConfig = {
     userProfile: "users",
-    useFirestoreForProfile: true,
+    presence: "presence", // where list of online users is stored in database
+    sessions: "sessions", // where list of user sessions is stored in database (presence must be enabled)
     enableLogging: false,
     enableRedirectHandling: false,
     updateProfileOnLogin: true,
@@ -29,6 +30,7 @@ export default (
     dependencies: { getFirebase }
   })
 
+  // Middlewares setup
   const prodMiddlewares = [
     routerMiddleware(history),
     epicMiddleware,
