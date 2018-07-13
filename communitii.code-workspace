@@ -5,12 +5,16 @@
         },
         {
             "path": "apps/web"
+        },
+        {
+            "path": "apps/mobile"
         }
     ],
     "settings": {
     "[javascriptreact]": {
         "editor.formatOnSave": true
     },
+    "editor.formatOnSave": true,
     "eslint.packageManager": "yarn",
     "eslint.executeAutofix": true,
     "prettier.eslintIntegration": true,

@@ -1,0 +1,22 @@
+{
+  presets: ["babel-preset-stage-0", "babel-preset-es2017", "babel-preset-expo"],
+  plugins: [
+    [
+      "module-resolver",
+      {
+        root: ["./src"],
+        alias: {
+          features: "./src/features"
+        }
+      }
+    ]
+  ],
+  env: {
+    development: {
+      plugins: ["transform-react-jsx-source"]
+    },
+    production: {
+      plugins: ["react-native-paper/babel"]
+    }
+  }
+}

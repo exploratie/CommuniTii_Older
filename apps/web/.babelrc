@@ -9,5 +9,16 @@
     ],
     "poi"
   ],
-  plugins: ["react-hot-loader/babel"]
+  plugins: [
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        root: ["./src"],
+        alias: {
+          features: "./src/features"
+        }
+      }
+    ]
+  ]
 }
