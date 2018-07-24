@@ -17,12 +17,11 @@ const styles = theme => ({
 })
 
 const renderTextField = (
-    {input, ...restProps}  // eslint-disable-line
+  { input, ...restProps } // eslint-disable-line
 ) => <TextField {...input} {...restProps} />
 
 const SigninForm = ({ classes, handleSubmit }) => (
   <Paper onSubmit={handleSubmit} component="form" className={classes.container}>
-    {" "}
     <Field
       component={renderTextField}
       className={classes.textField}
@@ -30,7 +29,7 @@ const SigninForm = ({ classes, handleSubmit }) => (
       label="Email"
       margin="normal"
       name="email"
-    />{" "}
+    />
     <Field
       component={renderTextField}
       className={classes.textField}
@@ -57,5 +56,8 @@ export default compose(
   withStyles(styles)
 )(SigninForm)
 
-// TODO: Add styling
-// TODO: Add proper error handling login form
+/*
+TODO: Add loading state handling
+TODO: Add error handling
+TODO: Add styling
+*/
