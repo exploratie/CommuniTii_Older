@@ -1,9 +1,9 @@
-import { push } from "connected-react-router"
-import { func, object, shape } from "prop-types"
 import React, { PureComponent } from "react"
 import { connect } from "react-redux"
 import { firebaseConnect, isEmpty, isLoaded } from "react-redux-firebase"
 import { compose } from "recompose"
+import { replace, push } from "connected-react-router"
+import { func, object, shape } from "prop-types"
 
 import SigninForm from "../components/SigninForm"
 
@@ -12,13 +12,14 @@ class SigninFormContainer extends PureComponent {
 
   static propTypes = {
     auth: object,
+    replace: func,
     push: func,
     firebase: shape({ auth: func })
   }
 
   static getDerivedStateFromProps(props) {
     if (isLoaded(props.auth) && !isEmpty(props.auth)) {
-      props.push("/")
+      props.replace("/")
     }
     return null
   }
