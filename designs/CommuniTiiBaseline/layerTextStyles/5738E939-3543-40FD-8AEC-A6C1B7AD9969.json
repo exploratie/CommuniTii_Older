@@ -1,0 +1,47 @@
+{
+  "_class": "sharedStyle",
+  "do_objectID": "5738E939-3543-40FD-8AEC-A6C1B7AD9969",
+  "name": "Body 2 / Black / Disabled / Center",
+  "value": {
+    "_class": "style",
+    "contextSettings": {
+      "_class": "graphicsContextSettings",
+      "blendMode": 0,
+      "opacity": 0.38
+    },
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "sharedObjectID": "5738E939-3543-40FD-8AEC-A6C1B7AD9969",
+    "startMarkerType": 0,
+    "textStyle": {
+      "_class": "textStyle",
+      "encodedAttributes": {
+        "MSAttributedStringColorAttribute": {
+          "_class": "color",
+          "alpha": 0.38,
+          "blue": 0,
+          "green": 0,
+          "red": 0
+        },
+        "MSAttributedStringFontAttribute": {
+          "_class": "fontDescriptor",
+          "attributes": {
+            "name": "Roboto-Regular",
+            "size": 14
+          }
+        },
+        "kerning": 0.25,
+        "ligature": 0,
+        "paragraphStyle": {
+          "_class": "paragraphStyle",
+          "alignment": 2,
+          "allowsDefaultTighteningForTruncation": 0,
+          "maximumLineHeight": 20,
+          "minimumLineHeight": 20
+        }
+      },
+      "verticalAlignment": 0
+    },
+    "windingRule": 1
+  }
+}

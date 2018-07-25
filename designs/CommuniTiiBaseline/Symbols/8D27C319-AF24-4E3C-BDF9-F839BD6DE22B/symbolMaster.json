@@ -1,0 +1,147 @@
+{
+  "_class": "symbolMaster",
+  "backgroundColor": {
+    "_class": "color",
+    "alpha": 1,
+    "blue": 1,
+    "do_objectID": "EC199E6A-5EA3-40AD-B54B-3066974F4CCA",
+    "green": 1,
+    "red": 1
+  },
+  "booleanOperation": 0,
+  "changeIdentifier": 17686,
+  "do_objectID": "8D27C319-AF24-4E3C-BDF9-F839BD6DE22B",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "2C47EA12-964C-4493-ACFA-29F09D22990F",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "F346ED74-3ABE-4C5F-ADBA-BCCAD09C008F",
+    "height": 512,
+    "width": 344,
+    "x": 23762,
+    "y": 0
+  },
+  "grid": {
+    "_class": "simpleGrid",
+    "gridSize": 4,
+    "isEnabled": true,
+    "thickGridTimes": 40
+  },
+  "hasBackgroundColor": false,
+  "hasClickThrough": true,
+  "horizontalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "4EFE9BB6-7C69-4C95-9ED4-CB898F8A7C4D",
+    "guides": [
+    ]
+  },
+  "includeBackgroundColorInExport": true,
+  "includeBackgroundColorInInstance": false,
+  "includeInCloudUpload": true,
+  "isFixedToViewport": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isFlowHome": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 1,
+  "layers": [
+    {
+      "class": "shapeGroup",
+      "id": "2F9DEF72-CFB1-457D-9442-E3FAEAA94E93"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "1BF96155-D8D7-4B16-A410-9B1526F86A70"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "A004F52B-F31A-4EF6-90B9-A1D6CBB6FB67"
+    },
+    {
+      "class": "group",
+      "id": "094BFC63-5C82-45E8-A768-F350AE8DFEB1"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "64A9EF3D-DEAF-443F-ACDF-37AD93AA61A7"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "A24D9AA4-7547-480E-A042-B623BAA927DD"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "8CEC7C9B-6034-4F46-A0C8-047EB2B3CB69"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "D90E03A9-6EF3-4EBF-B851-A229AE6AAB61"
+    },
+    {
+      "class": "symbolInstance",
+      "id": "19D22C88-5FC5-47D2-8ADF-38944E1FD09C"
+    }
+  ],
+  "layout": {
+    "_class": "layoutGrid",
+    "columnWidth": 48,
+    "drawHorizontal": true,
+    "drawHorizontalLines": false,
+    "drawVertical": false,
+    "gutterHeight": 4,
+    "gutterWidth": 2904,
+    "guttersOutside": false,
+    "horizontalOffset": -123,
+    "isEnabled": false,
+    "numberOfColumns": 2,
+    "rowHeightMultiplication": 1,
+    "totalWidth": 3000
+  },
+  "name": "Cards / with Chips / Filled / Resting",
+  "nameIsFixed": true,
+  "resizesContent": true,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": true,
+  "style": {
+    "_class": "style",
+    "do_objectID": "89FC8EA5-96C7-4275-BC6E-5525AD602CEA",
+    "endMarkerType": 0,
+    "miterLimit": 10,
+    "startMarkerType": 0,
+    "windingRule": 1
+  },
+  "symbolID": "5446909C-D508-4371-A997-BECE164B1C7C",
+  "userInfo": {
+    "com.google.ux.material.spec_tools": {
+      "cornerSizesDp": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "theme": "{\"lastUpdatedUtc\":\"2018-07-25 19:48:45\",\"palettes\":{\"PRIMARY\":{\"colors\":[{\"red\":0.8823529411764706,\"green\":0.9607843137254902,\"blue\":0.996078431372549,\"alpha\":1},{\"red\":0.7019607843137254,\"green\":0.8980392156862745,\"blue\":0.9882352941176471,\"alpha\":1},{\"red\":0.5058823529411764,\"green\":0.8313725490196079,\"blue\":0.9803921568627451,\"alpha\":1},{\"red\":0.30980392156862746,\"green\":0.7647058823529411,\"blue\":0.9686274509803922,\"alpha\":1},{\"red\":0.1607843137254902,\"green\":0.7137254901960784,\"blue\":0.9647058823529412,\"alpha\":1},{\"red\":0.011764705882352941,\"green\":0.6627450980392157,\"blue\":0.9568627450980393,\"alpha\":1},{\"red\":0.011764705882352941,\"green\":0.6078431372549019,\"blue\":0.8980392156862745,\"alpha\":1},{\"red\":0.00784313725490196,\"green\":0.5333333333333333,\"blue\":0.8196078431372549,\"alpha\":1},{\"red\":0.00784313725490196,\"green\":0.4666666666666667,\"blue\":0.7411764705882353,\"alpha\":1},{\"red\":0.00392156862745098,\"green\":0.3411764705882353,\"blue\":0.6078431372549019,\"alpha\":1}],\"mainColorIndex\":5},\"SECONDARY\":{\"colors\":[{\"red\":1,\"green\":0.9215686274509803,\"blue\":0.9333333333333333,\"alpha\":1},{\"red\":1,\"green\":0.803921568627451,\"blue\":0.8235294117647058,\"alpha\":1},{\"red\":0.9372549019607843,\"green\":0.6039215686274509,\"blue\":0.6039215686274509,\"alpha\":1},{\"red\":0.8980392156862745,\"green\":0.45098039215686275,\"blue\":0.45098039215686275,\"alpha\":1},{\"red\":0.9372549019607843,\"green\":0.3254901960784314,\"blue\":0.3137254901960784,\"alpha\":1},{\"red\":0.9568627450980393,\"green\":0.2627450980392157,\"blue\":0.21176470588235294,\"alpha\":1},{\"red\":0.8980392156862745,\"green\":0.2235294117647059,\"blue\":0.20784313725490197,\"alpha\":1},{\"red\":0.8274509803921568,\"green\":0.1843137254901961,\"blue\":0.1843137254901961,\"alpha\":1},{\"red\":0.7764705882352941,\"green\":0.1568627450980392,\"blue\":0.1568627450980392,\"alpha\":1},{\"red\":0.7176470588235294,\"green\":0.10980392156862745,\"blue\":0.10980392156862745,\"alpha\":1}],\"mainColorIndex\":2},\"SURFACE\":{\"colors\":[{\"red\":1,\"green\":1,\"blue\":1,\"alpha\":1},{\"red\":0.9807089859888657,\"green\":0.9807090923474681,\"blue\":0.9807090166169335,\"alpha\":1},{\"red\":0.9614896126428832,\"green\":0.9614897160775632,\"blue\":0.9614896423314422,\"alpha\":1},{\"red\":0.9423426493624547,\"green\":0.942342746714893,\"blue\":0.9423426768771614,\"alpha\":1},{\"red\":0.8692227753206838,\"green\":0.8692228576649179,\"blue\":0.8692227977439545,\"alpha\":1},{\"red\":0.762033684573245,\"green\":0.7620337541261238,\"blue\":0.7620337031299386,\"alpha\":1},{\"red\":0.5902992747236278,\"green\":0.5902993277528529,\"blue\":0.5902992886361145,\"alpha\":1},{\"red\":0.504871739011006,\"green\":0.5048717839890382,\"blue\":0.504871750679026,\"alpha\":1},{\"red\":0.37657369588808237,\"green\":0.3765737282854163,\"blue\":0.37657370399423673,\"alpha\":1},{\"red\":0.2366709262652505,\"green\":0.23667094522274518,\"blue\":0.2366709305962576,\"alpha\":1}],\"mainColorIndex\":0}},\"cornerType\":\"ROUNDED\",\"cornerSizesDp\":[4,4,4,4],\"textStyles\":{\"HEADLINE_1\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Light\",\"traits\":0,\"weight\":3},\"metrics\":{\"fontSize\":96}},\"HEADLINE_2\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Light\",\"traits\":0,\"weight\":3},\"metrics\":{\"fontSize\":60}},\"HEADLINE_3\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},\"metrics\":{\"fontSize\":48}},\"HEADLINE_4\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},\"metrics\":{\"fontSize\":34}},\"HEADLINE_5\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},\"metrics\":{\"fontSize\":24}},\"HEADLINE_6\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Medium\",\"traits\":0,\"weight\":6},\"metrics\":{\"fontSize\":20}},\"SUBTITLE_1\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},\"metrics\":{\"fontSize\":16}},\"SUBTITLE_2\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Medium\",\"traits\":0,\"weight\":6},\"metrics\":{\"fontSize\":14}},\"BODY_1\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},\"metrics\":{\"fontSize\":16}},\"BODY_2\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},\"metrics\":{\"fontSize\":14}},\"CAPTION\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},\"metrics\":{\"fontSize\":12}},\"BUTTON\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Medium\",\"traits\":0,\"weight\":6},\"metrics\":{\"fontSize\":14}},\"OVERLINE\":{\"font\":{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Medium\",\"traits\":0,\"weight\":6},\"metrics\":{\"fontSize\":12}}},\"selectedFontFamilies\":[{\"name\":\"Roboto\",\"fonts\":[{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Regular\",\"traits\":0,\"weight\":5},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Italic\",\"traits\":1,\"weight\":5},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Light\",\"traits\":0,\"weight\":3},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Light Italic\",\"traits\":1,\"weight\":3},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Medium\",\"traits\":0,\"weight\":6},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Medium Italic\",\"traits\":1,\"weight\":7},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Bold\",\"traits\":2,\"weight\":9},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Thin\",\"traits\":65600,\"weight\":3},{\"fontFamilyName\":\"Roboto\",\"fontName\":\"Thin Italic\",\"traits\":65,\"weight\":3}]}]}",
+      "themeMetadataVersion": 4,
+      "type": "cards"
+    }
+  },
+  "verticalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "A72E932A-D862-4DC4-BED5-C57F75706206",
+    "guides": [
+    ]
+  }
+}
